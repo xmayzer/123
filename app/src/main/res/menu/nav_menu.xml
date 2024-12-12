@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/baseline_auto_graph"
+        android:icon="@drawable/baseline_auto_graph"
+        android:title=""/>
+
+    <item
+        android:id="@+id/baseline_assignment"
+        android:icon="@drawable/baseline_assignment"
+        android:title=""/>
+
+    <item
+        android:id="@+id/baseline_lightbulb"
+        android:icon="@drawable/baseline_lightbulb"
+        android:title=""/>
+
+</menu>

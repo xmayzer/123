@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:paddingBottom="40dp"
+    android:layout_marginTop="?attr/actionBarSize">
+
+    <!-- Заголовок для графика -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Статистика"
+        android:textSize="20sp"
+        android:paddingTop="10dp"
+        android:textAlignment="center"
+        android:fontFamily="@font/roboto_serif"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Круговой график -->
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/pieChart"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="@drawable/pink_border"
+        android:padding="30dp"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="График настроения"
+        tools:ignore="MissingClass" />
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/barChart"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/pink_border"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="График статистики по датам и типам картинок"
+        tools:ignore="MissingClass" />
+</LinearLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/notesFragment">
+    <fragment
+        android:id="@+id/notesFragment"
+        android:name="com.example.a123.fragments.NotesFragment"
+        android:label="fragment_notes"
+        tools:layout="@layout/fragment_notes" >
+        <action
+            android:id="@+id/action_notesFragment_to_lightFragment"
+            app:destination="@id/lightFragment" />
+        <action
+            android:id="@+id/action_notesFragment_to_editFragment"
+            app:destination="@id/editFragment" />
+        <action
+            android:id="@+id/action_notesFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lightFragment"
+        android:name="com.example.a123.fragments.LightFragment"
+        android:label="fragment_light"
+        tools:layout="@layout/fragment_light" >
+        <action
+            android:id="@+id/action_lightFragment_to_graphFragment"
+            app:destination="@id/graphFragment" />
+        <action
+            android:id="@+id/action_lightFragment_to_notesFragment"
+            app:destination="@id/notesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/graphFragment"
+        android:name="com.example.a123.fragments.GraphFragment"
+        android:label="fragment_graph"
+        tools:layout="@layout/fragment_graph" >
+        <action
+            android:id="@+id/action_graphFragment_to_lightFragment"
+            app:destination="@id/lightFragment" />
+        <action
+            android:id="@+id/action_graphFragment_to_notesFragment"
+            app:destination="@id/notesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.example.a123.fragments.AddFragment"
+        android:label="AddFragment" >
+        <action
+            android:id="@+id/action_addFragment_to_notesFragment"
+            app:destination="@id/notesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="com.example.a123.fragments.EditFragment"
+        android:label="EditFragment" >
+        <action
+            android:id="@+id/action_editFragment_to_notesFragment"
+            app:destination="@id/notesFragment" />
+        <argument
+            android:name="note"
+            app:argType="com.example.a123.model.Note"
+            app:nullable="true"/>
+    </fragment>
+</navigation>

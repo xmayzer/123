@@ -68,13 +68,13 @@ class NoteAdapter(private val fragmentManager: FragmentManager): RecyclerView.Ad
                     putParcelable(
                         "note",
                         currentNote
-                    ) // Предполагается, что Note реализует Parcelable
+                    )
                 }
             }
 
             // Начинаем транзакцию для замены фрагмента
             fragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainerView, editFragment) // Убедитесь, что ID контейнера совпадает
+                .replace(R.id.fragmentContainerView, editFragment)
                 .addToBackStack(null) // Добавляем в стек для возможности возврата
                 .commit()
         }
